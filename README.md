@@ -1,6 +1,6 @@
 # Flappuccino
 
-Flappuccino is a game created in 48 hours for the [PyGame Community New Years Jam](https://itch.io/jam/pygame-community-jam) using Python with [Pygame](https://www.pygame.org). 
+Flappuccino is a game created in 48 hours for the [PyGame Community New Years Jam](https://itch.io/jam/pygame-community-jam) using Python with [Pygame](https://www.pygame.org). I, LeWolfYT, have decided to make it widescreen (16:9) as a challenge. Expect the same gameplay as the old version but in widescreen!
 ## Screenshots
 ![](https://img.itch.zone/aW1hZ2UvODg3MDQ0LzUwMDQzOTkuZ2lm/original/vd0wHu.gif) 
 
@@ -9,7 +9,7 @@ Information on how to play is available on the game's [itch.io page](https://pol
 
 ## Usage
 ### Releases
-A Windows build of the game is available [here](https://polymars.itch.io/flappuccino).
+I cannot build this.
 ### Running from source
 Grab the latest release of Python from [here](https://www.python.org/downloads/) **and** install Pygame by executing ``pip install pygame``.
 
@@ -18,10 +18,15 @@ Grab the latest release of Python from [here](https://www.python.org/downloads/)
 ``python -m pip install pygame``
 2. Mac: 
 ``python3 -m pip install pygame``
+``pip3 install pygame``
 3. Linux:
 Same as windows.
 
 Ensure ``main.py`` is in the same directory as ``./data`` and execute  ``python main.py``.
 
-## Contributing
-Pull requests are welcome! For major refactors, please open an issue first to discuss what you would like to improve. Feel free to create a fork of this repository and use the code for any noncommercial purposes.
+## Credit
+Polymars - Original
+LeWolfYT (Me) - Widescreen Mod/Patch
+
+## Other
+adding updated ui assets soon
