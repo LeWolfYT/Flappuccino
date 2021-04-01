@@ -12,8 +12,8 @@ from utils import checkCollisions
 def main():
     pygame.init()
     # set the display
-    DISPLAY=pygame.display.set_mode((640,480),0,32)
-    pygame.display.set_caption('Flappuccino')
+    DISPLAY=pygame.display.set_mode((853,480),0,32)
+    pygame.display.set_caption('Flappuccino Widescreeno')
     pygame.display.set_icon(Bean().sprite)
     # get fonts
     font = pygame.font.Font('data/fonts/font.otf', 100)
@@ -60,7 +60,7 @@ def main():
     beanCount = 0
     startingHeight = player.position.y
     height = 0
-    health = 100
+    health = 125
     flapForce = 3
     beanMultiplier = 5
     dead = False
@@ -86,7 +86,7 @@ def main():
 
         DISPLAY.fill((231, 205, 183))
         # fill the start message on the top of the game
-        startMessage = font_small.render("POLYMARS", True, (171, 145, 123))
+        startMessage = font_small.render("POLYMARS (Widescreen by LeWolfYT)", True, (171, 145, 123))
         DISPLAY.blit(startMessage, (DISPLAY.get_width()/2 - startMessage.get_width()/2, DISPLAY.get_height()/2 - startMessage.get_height()/2))
             
         # update display
@@ -170,7 +170,7 @@ def main():
         
         DISPLAY.blit(pygame.transform.rotate(player.currentSprite, clamp(player.velocity.y, -10, 5)*rotOffset), (player.position.x,player.position.y + camOffset))
         DISPLAY.blit(shop_bg, (0, 0))
-        pygame.draw.rect(DISPLAY,(81,48,20),(21,437,150*(health/100),25))
+        pygame.draw.rect(DISPLAY,(81,48,20),(21,437,150*(health/125),25))
         DISPLAY.blit(shop, (0, 0))
         
         for button in buttons:
@@ -190,7 +190,7 @@ def main():
         height = round(-(player.position.y - startingHeight)/DISPLAY.get_height())
  
         player.position.x += player.velocity.x*dt
-        if player.position.x + player.currentSprite.get_size()[0] > 640:
+        if player.position.x + player.currentSprite.get_size()[0] > 853:
             player.velocity.x = -abs(player.velocity.x)
             player.currentSprite = player.leftSprite
             rotOffset = 5
@@ -218,7 +218,7 @@ def main():
                 dead = False
                 pygame.mixer.Sound.play(beanfx)
                 beanCount += 1
-                health = 100
+                health = 125
                 bean.position.y -= DISPLAY.get_height() - random.randrange(0, 200)
                 bean.position.x = random.randrange(0, DISPLAY.get_width() - bean.sprite.get_width())
 
@@ -242,7 +242,7 @@ def main():
                             beans[-1].position.xy = random.randrange(0, DISPLAY.get_width() - bean.sprite.get_width()), player.position.y - DISPLAY.get_height() - random.randrange(0, 200)
         
         if dead and clicked and checkCollisions(mouseX, mouseY, 3, 3, 4, 4, retry_button.get_width(), retry_button.get_height()):
-            health = 100
+            health = 125
             player.velocity.xy = 3, 0
             player.position.xy = 295, 100
             player.currentSprite = player.rightSprite
