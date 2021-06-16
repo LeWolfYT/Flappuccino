@@ -12,7 +12,7 @@ from .utils import checkCollisions
 def main():
     pygame.init()
     # set the display
-    DISPLAY=pygame.display.set_mode((640,480),0,32)
+    DISPLAY=pygame.display.set_mode((1280,720),0,32)
     pygame.display.set_caption('Flappuccino')
     pygame.display.set_icon(Bean().sprite)
     # get fonts
@@ -65,7 +65,7 @@ def main():
     beanMultiplier = 5
     dead = False
     # we need the framerate and then the time
-    framerate = 60
+    framerate = 165
     last_time = time.time()
     splashScreenTimer = 0
     #splash screen
